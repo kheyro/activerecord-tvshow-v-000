@@ -8,4 +8,8 @@ class Show < ActiveRecord::Base
     Show.maximum(:rating).name
   end
 
+  def self.lowest_rating
+    Show.minimum(:rating)
+  end
+
 end
